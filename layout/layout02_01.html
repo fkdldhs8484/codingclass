@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃2</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        /* 정렬 */
+        body {
+            background-color: rgb(180, 159, 159);
+        }
+        /* 배경색 */
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #header {
+            width: 1200px;
+            height: 100px;
+            background-color: rgb(241, 217, 217);
+        }
+        #nav {
+            width: 1200px;
+            height: 100px;
+            background-color: rgb(194, 171, 171);
+        }
+        #main {
+            width: 1200px;
+            overflow: hidden; 
+        }
+        #aside {
+            width: 300px;
+            height: 780px;
+            background-color: rgb(168, 144, 144);
+            float: left; 
+        }
+        #section {
+            width: 600px;
+            height: 780px;
+            background-color: rgb(148, 107, 107);
+            float: left;
+        }
+        #article {
+            width: 300px;
+            height: 780px;
+            background-color: rgb(196, 145, 145);
+            float: left;
+        }
+        #footer {
+            width: 1200px;
+            height: 100px;
+            background-color: rgb(241, 217, 217);
+        }
+        @media(max-width:1220px){
+        }
+        @media(max-width:768px){
+        }
+        @media(max-width:480px){
+        }
+
+    </style>
+</head>
+<body>
+        <div id="wrap">
+            <div id="header"></div>
+            <div id="nav"></div>
+            <div id="main">
+                <div id="aside"></div>
+                <div id="section"></div>
+                <div id="article"></div>
+            </div>
+            <div id="footer"></div>
+    </div>
+    <!-- 
+        layout03_01 : float 방식 레이아웃
+        layout03_02 : float 방식 반응형 레이아웃  
+        layout03_03 : flex 방식 레이아웃 
+        layout03_04 : flex 방식 반응형 레이아웃  
+        layout03_05 : grid 방식 레이아웃 
+        layout03_06 : grid 방식 반응형 레이아웃  
+    -->
+</body>
+</html>

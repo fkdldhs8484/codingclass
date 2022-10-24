@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 기본 규칙</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+                <li><a href="element.html">요소 선택</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">사이트 만들기 : 카드 유형03</h2>
+            <p class="t_desc2">이번 카드 유형은 큰 이미지가 3개이다. 먼저 생각해야할건 상자?를 3개로 잡아야한다.
+                전체 배경이 들어갔다.
+            </p>
+            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F904PJvJk5HJjP92bgCKqer%2F%25EC%2582%25AC%25EC%259D%25B4%25ED%258A%25B8-%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B0%3Fnode-id%3D128%253A1136" allowfullscreen></iframe>
+            <hr>
+            <h3 class="t_tit2">HTML 유형</h3>
+            <div class="t_code">
+<pre><code>&ltsection id="cardType03" class="card__wrap score section">
+    &lth2 class="blind">주황색 과일&lt/h2>
+    &ltdiv class="card__inner container">
+        &ltarticle class="card">
+            &ltfigure class="card__header">
+                &ltimg src="img/card_bg03_1.jpg" alt="Architects">
+                &ltfigcaption>orange&lt/figcaption>
+            &lt/figure>
+            &ltdiv class="card__contents">
+                &lth3>오렌지(orange) 의 대하여 알아보자.&lt/h3>
+                &ltp>오렌지는 비타민 c가 매우 풍부한 과일의 하나로, 일반적 으로 당귤 나무의 열매인 당귤을 부르는 말이다. 대표적인 귤 열매로 기름기를 함유한 가죽질 껍질과
+                즙이 많은 과육으로 이루어져 있다.&lt/p>
+            &lt/div>
+            &ltdiv class="card__footer">
+                &lth4>오렌지 박사&ltem>9 Resources&lt/em>&lt/h4>
+                &ltspan>&ltimg src="img/card_bg03_1.png" alt="프로필">&lt/span>
+            &lt/div>
+        &lt/article>
+        &ltarticle class="card">
+            &ltfigure class="card__header">
+                &ltimg src="img/card_bg03_2.jpg" alt="Architects">
+                &ltfigcaption> Hallabong&lt/figcaption>
+            &lt/figure>
+            &ltdiv class="card__contents">
+                &lth3>한라봉(Hallabong) 을 알아보자.&lt/h3>
+                &ltp>귤 종류 중에서 제일 좋아하는 한라봉 나같이 신맛을 싫어하는 사람들에게는 아주 달달한 과일이다. 과육의 질감은 오렌지처럼 약간 단단한 편이고 물기가 많아
+                차게 먹으면 아주 시원하다.&lt/p>
+            &lt/div>
+            &ltdiv class="card__footer">
+                &lth4>한라봉 박사 &ltem> Resources &lt/em>&lt/h4>
+                &ltspan>&ltimg src="img/card_bg03_05.jpg" alt="프로필">&lt/span>
+            &lt/div>
+        &lt/article>
+        &ltarticle class="card">
+            &ltfigure class="card__header">
+                &ltimg src="img/card_bg03_3.jpg" alt="#">
+                &ltfigcaption>mandarin &lt/figcaption>
+            &lt/figure>
+            &ltdiv class="card__contents">
+                &lth3>귤(mandarin) 의 대하여 알아보자.&lt/h3>
+                &ltp>감귤나무 열매로 모양은 둥글납작하고 빛깔은 주황 혹은 붉은색이다. 수분이 풍부하고 매우 맛있다. 겨울 제철 과일이다. 쪼물딱 거리고 먹으면 더욱 맛있다.</p>
+            &lt/div>
+            &ltdiv class="card__footer">
+                &lth4>귤 박사 &ltem> 9 Resources &lt/em></h4>
+                &ltspan>&ltimg src="img/card_bg03_3.png" alt="프로필">&lt/span>
+            &lt/div>
+        &lt/article>
+    &lt/div>
+&lt/section>
+</code></pre>
+            </div>
+            <hr>
+            <div class="document">
+                <h3 class="t_tit2">CSS 유형</h3>
+                <p class="t_box">
+                    <i>figcaption</i>을 써 이미지 안에 카테고리 를 만들었다.<br>
+                    <i>.card__inner .card:nth-child(1)</i> 안에 border-right: 1px solid #eee; 을 써 구분하는 선을 추가한다. '1'을 '2'로 바꾸면 선 2개 추가...<br>
+                    <i>.card__footer</i> 에는 h4,em을 넣어 위치를 설정하고 span을 사용해 이미지 크기와 위치를 설정한다.<br>
+                    <i>justify-content</i> 에는 메인축 방향으로 아이템을 정렬하는 속성이다. flex-end를 주어 오른쪽으로 붙여준다.
+                </p>
+                <div class="t_code">
+<pre><code>/* fonts */
+    @import url('https://webfontworld.github.io/score/SCoreDream.css');
+    .score {
+        font-family: 'SCoreDream';
+        font-weight: 300;
+    }
+    /* reset */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+    img {
+        width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: normal;
+    }
+    /* common */
+    .container {
+        width: 1160px;
+        padding: 0 20px;
+        margin: 0 auto;
+        min-width: 1160px;
+    }
+    .section {
+        padding: 120px 0;
+    }
+    .section > h2 {
+        font-size: 50px;
+        line-height: 1;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .section > p {
+        font-size: 22px;
+        font-weight: 300;
+        color: #666;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+    /* blind */
+    .blind {
+        position:absolute;
+        clip: rect(0 0 0 0);
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+    }
+    /* cardType03 */
+    body {
+        background-color: #FCAA5B;
+    }
+    .card__inner {
+        display: flex;
+    }
+    .card__inner .card {
+        padding: 26px;
+        width: 33.3333%;
+        background-color: #fff;
+    }
+    .card__inner .card:nth-child(1) {
+        border-right: 1px solid #eee;
+    }
+    .card__inner .card:nth-child(2) {
+        border-right: 1px solid #eee;
+    }
+    .card__header {
+        position: relative;
+    }
+    .card__header img {
+        border-radius: 10px;
+        box-shadow: 4px 4px 5px 0 rgba(0, 0, 0, 0.05);
+        margin-bottom: 20px;
+    }
+    .card__header figcaption {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        padding: 6px 16px;
+        border-radius: 50px;
+        background-color: #fff;
+        text-align: center;
+        font-size: 14px;
+        color: #FCAA5B;
+    }
+    .card__contents h3 {
+        font-size: 20px;
+        line-height: 1.4;
+        margin-bottom: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    .card__contents p {
+        color: #666;
+        font-size: 16px;
+        line-height: 1.7;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        margin-bottom: 30px;
+    }
+    .card__footer {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .card__footer h4 {
+        text-align: right;
+        color: #FCAA5B;
+    }
+    .card__footer em {
+        display: block;
+        color: #666;
+        font-style: normal;
+    }
+    .card__footer span {
+        width: 40px;
+        height: 40px;
+        background: #000;
+        border-radius: 50%;
+        overflow: hidden;
+        display: block;
+        margin-left: 10px;
+        margin-top: -3px;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+</code></pre>
+                </div>
+            </div>
+            <hr>
+            <h3 class="t_tit2">결과</h3>
+            <div class="t_iframe" style="min-height: 1000px; padding-top: 0;">
+                <iframe src="https://fkdldhs8484.github.io/coding2/site/cardType/cardType03_22.08.11.html" frameborder="0"></iframe>
+            </div>
+           
+            <div class="t_link">
+                <a href="https://github.com/fkdldhs8484/coding2/blob/main/javascript/javascript01.html"
+                    target="_blank">원본 소스 보기</a>
+            </div>
+            <div class="t_link">
+                <a href="http://127.0.0.1:5500/site/cardType/cardType03_22.08.11.html">원본 페이지 보기</a>
+            </div>
+
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>

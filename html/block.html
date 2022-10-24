@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 기초</title>
+
+    <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'GmarketSans';
+        }
+        #header {
+            padding: 2vw;
+            border-bottom: 1px dashed #dedede;
+        }
+        #header h1 {
+            font-size: 4cw;
+            margin-bottom: 2vw;
+        }
+        #header nav ul li {
+            list-style: none;
+            display: inline;
+        }
+        #header nav ul li a {
+            text-decoration: none;
+            color: #000;
+            border: 1px solid #000;
+            padding: 0.6vw 1vw 0.6vw 1vw;
+            display: inline-block;
+        }
+        #header nav ul li a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        /* 컨텐츠 */ 
+        #contents {
+            padding: 2vw;
+        }
+        #contents {
+            padding: 2vw;
+        }
+        #contents .menu {
+            border-bottom: 1px dashed #dedede;
+            padding-bottom: 2vw;
+        }
+        #contents .menu ul {}
+        #contents .menu  ul li{
+            list-style: none;
+            display: inline;
+        }
+        #contents .menu ul li a {
+            text-decoration: none;
+            color: #000;
+            border: 1px solid #000;
+            background-color: #000;
+            color: #fff;
+            padding: 0.6vw 1vw 0.6vw 1vw;
+            word-break: keep-all;
+            margin-top: 0.7vw;
+            margin-bottom: 0.7vw;
+            display: inline-block;
+        }
+        .article {
+            padding: 2vw 0;
+            line-height: 1.6;
+        }
+        .article h2 {
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+        .article p {
+            margin-bottom: 10px;
+        }
+        .article .table {
+            width: 100%;
+            border-spacing: 0;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+        .article .table tr th {
+            border: 1px solid #dedede;
+            padding: 10px;
+            font-weight: normal;
+            background-color: #f5f5f5;
+        }
+        .article .table tr td {
+            border : 1px solid #dedede;
+            padding: 10px;
+        }
+        .article .table .center {
+            text-align: center;
+        }
+        .article .box {
+            background-color: #f5f5f5;
+            padding: 15px;
+        }
+
+    /* 미디어 커리 */
+        @media (max-width: 800px){
+            #header  {
+                padding: 16px;
+            }
+            #header h1 {
+                font-size: 40px;
+            }
+            #header nav ul li a {
+                padding: 5px 10px;
+                font-size: 18px;
+            }
+            #contents {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1>HTML</h1>
+        <nav>
+            <ul>
+                <li><a href="#">기초</a></li>
+                <li><a href="#">주제</a></li>
+                <li><a href="#">알파벳</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="contents">
+        <nav class="menu">
+            <ul>
+                <li><a href="basic.html">기본 문서</a></li>
+                <li><a href="markup.html">기본 규칙</a></li>
+                <li><a href="w3c.html">W3C validator</a></li>
+                <li><a href="semantic.html">시멘틱 마크업</a></li>
+                <li><a href="block.html">블록/인라인 요소</a></li>
+            </ul>
+        </nav>
+    <article class="article">
+        <h2>01.블록 레벨 요소(Block-level Elements)</h2>
+            <p>마크업을 할 때 줄이 바뀌는 특성을 가지고 있다.</p>
+            <pre class="box">
+ &lt;!DOCTYPE html!&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;블록 레벨 요소&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;블록 레벨 요소&lt;/h1&gt;
+    &lt;h2&gt;블록 레벨 요소 성질&lt;/h2&gt;
+    &lt;p&gt;줄 바꿈이 생깁니다.&lt;/p&gt;
+ &lt;/body&gt;
+ &lt;/html&gt; </pre>
+            <article class="article">
+        <h2>02.인라인 요소(lnline Element)</h2>
+                <p>줄 바꿈 특성이 없다. 행이 바뀌지 않고 한 줄로 출력 된다.</p>
+                <pre class="box">
+&lt;!DOCTYPE html!&gt;
+&lt;html lang="ko"&gt;
+ &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;인라인요소&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+    &lt;strong&gt;인라인 요소&lt;/strong&gt;
+    &lt;strong&gt;인라인 요소는 한 줄로 출력 됨.&lt;/strong&gt;
+ &lt;/body&gt;
+ &lt;/html&gt;
+</pre>
+            </article>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>요소 유형</th>
+                        <th>특징</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="center">블록 레벨 <br>요소</td>
+                        <td>1.블록 레벨 요소는 줄 바꿈이 일어납니다. <br> 2. 블록 레벨 요소는 텍스트 (문자)와 인라인 여소를 자식 요소로 포함할 수있다.
+                        <br>3.블록 레벨 요소 중에는 블록 레벨 요소를 자식 요소로 포함 할 수 있는 요소와 포함할 수 없는 요소가 있습니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="center">인라인 요소</td>
+                        <td>1.인라인 요소는 줄 바꿈이 일어나지 않습니다. <br> 2.인라인 요소는 텍스트(문자)와 인라인 요소를 자식 요소로 포함할 수 있다.
+                        <br>3.인라인 요소는 블록 레벨 요소를 자식 요소로 포함할 수 없다.</td>
+                    </tr>
+                </tbody>
+            </table>
+</body>
+</html>

@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>220930 - 시험</title>
+
+    <!-- SEO (검색엔진최적화) -->
+    <meta name="author" content="KDE">
+    <meta name="description" content="사이트 만들기 튜토리얼입니다.">
+    <meta name="keyword" content="사이트, 사이트 만들기, 튜토리얼, KDE, 코딩공책, webstoryboy">
+    <meta name="robots" content="all">
+
+    <!-- CSS -->
+    <!-- fonts가 제일 위에 있어야 적용됨 -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/dracula2.css">
+    <!-- <link rel="stylesheet" href="assets/css/common.css"> -->
+
+    <link href="https://webfontworld.github.io/naver/NanumGothic.css" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'NanumGothic';
+        }
+
+        .container {
+            width: 1160px;
+            padding: 0 20px;
+            margin: 0 auto;
+            min-width: 1160px;
+            /* 반응형 할 때 없애줄 것 */
+        }
+
+        /* headerType */
+        .header__inner {
+            width: 100%;
+            height: 130px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            margin: 0 auto;
+            background: #fff;
+        }
+
+        .header__logo {
+            width: 20%;
+        }
+
+        .header__logo img {
+            width: 140px;
+        }
+
+        .header__menu {
+            width: 80%;
+            text-align: right;
+        }
+
+        .header__menu li {
+            display: inline;
+        }
+
+        .header__menu li a {
+            font-size: 18px;
+            font-weight: 500;
+            padding: 13px 25px;
+            margin: 0 5px;
+            transition: background-color 0.3s;
+        }
+
+        .header__menu li a:hover {
+            background: #f1f1f1;
+            border-radius: 5px;
+        }
+
+        .header__member {
+            width: 20%;
+            text-align: right;
+        }
+
+        .header__member a {
+            font-size: 16px;
+            border: 1px solid #000;
+            padding: 10px 30px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .header__member a:hover {
+            background: #000;
+            color: #fff;
+        }
+
+        /* slider */
+        .slider__wrap {
+            width: 1160px;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slider__img {
+            /*이미지가 보이는 영역*/
+            position: relative;
+            width: 1160px;
+            height: 437px;
+            overflow: hidden;
+        }
+
+        .slider__inner {
+            /*이미지를 감싸고 있는 부모 : 움직이는 부분*/
+            display: flex;
+            flex-wrap: wrap;
+            width: 4800px;
+            /* 총 이미지 6개 */
+            height: 437px;
+        }
+
+        .slider {
+            /*개별적인 이미지*/
+            position: relative;
+            width: 1160px;
+            height: 437px;
+        }
+
+        .slider::before {
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            background: rgba(0, 0, 0, 0.4);
+            color: #fff;
+            padding: 5px 10px;
+        }
+
+        @media (max-width: 800px) {
+            .slider__img {
+                width: 400px;
+                height: 224px;
+            }
+        }
+
+        /* notice1 */
+        .notice1__wrap {
+            width: 1160px;
+            margin-bottom: 40px;
+            background: #f3f7f8;
+        }
+
+        .notice1__wrap>h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .box__wrap {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .notice__box {
+            width: 20%;
+            background: #fff;
+            border: 1px solid #dcdcdc;
+            padding: 20px;
+        }
+
+        .notice__box>.d-day {
+            padding: 5px 12px;
+            border: 3px solid #859db7;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #486682;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .notice__box>h3 {
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .period {
+            color: #666;
+        }
+
+        .period em {
+            background: #6592d5;
+            color: #fff;
+            padding: 3px;
+            display: inline-block;
+            border-radius: 6px;
+        }
+
+        /* notice2 */
+        #notice2 {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .bodojaryo {
+            width: 30%;
+            background: #fff;
+            border: 1px solid #dcdcdc;
+            padding: 20px;
+        }
+
+        .bodojaryo>h3 {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .bodojaryo>h3 em {
+            color: #666;
+        }
+
+        .document__title {
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .document__title .date {
+            color: #666;
+            font-weight: 300;
+        }
+
+        .yeongubogoseo {
+            width: 60%;
+            background: #fff;
+            border: 1px solid #dcdcdc;
+            padding: 20px;
+            position: relative;
+        }
+
+        .yeongubogoseo>h3 {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .yeongubogoseo>.document__title li {
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 8px;
+            line-height: 1.7;
+        }
+
+        .yeongubogoseo>.document__title em {
+            background: #3174cf;
+            color: #fff;
+            width: 100px;
+            align-items: center;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .yeongubogoseo>.document__date {
+            position: absolute;
+            bottom: 26px;
+            right: 20px;
+
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 8px;
+            line-height: 2.2;
+            background: #fff;
+        }
+
+        /* notice3 */
+        #notice3 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .onlineseminar {
+            width: 30%;
+            background-image: url(assets/img/Test04/seminar.jpg);
+            filter: brightness(80%);
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: 1px solid #dcdcdc;
+            padding: 20px;
+        }
+
+        .onlineseminar>h3 {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .onlineseminar>p {
+            color: #fff;
+            font-weight: 400;
+            margin-bottom: 40px;
+        }
+
+        .onlineseminar .btn {
+            color: #fff;
+            border: 2px solid #fff;
+            padding: 8px 30px;
+        }
+
+        .tongsangjeongbo {
+            width: 60%;
+            background: #fff;
+            border: 1px solid #dcdcdc;
+            padding: 20px;
+            position: relative;
+        }
+
+        .document__flex {
+            display: flex;
+        }
+
+        .tongsangjeongbo>h3 {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        hr {
+            margin: 0 20px;
+        }
+
+        /* plus button */
+        .plus {
+            padding: 10px 12px;
+            border: 1px solid #000;
+            display: inline;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /* footer */
+        #footerType {
+            background: #263f5e;
+            color: #fff;
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        .footer__logo {
+            height: 80px;
+            width: 200px;
+        }
+
+        .footer__info {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .footer__menu {
+            padding: 20px 0;
+        }
+
+        .footer__menu ul {
+            display: flex;
+        }
+
+        .footer__menu ul li {
+            padding-right: 20px;
+            color: #666;
+        }
+
+        .footer__menu ul li a {
+            color: #999;
+        }
+
+        .footer__address p {
+            color: #999;
+        }
+
+        .footer__address p>em {
+            color: #666;
+        }
+
+        .footer__wrap {
+            display: flex;
+            padding: 60px 0;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="container">
+        <section id="headerType">
+            <div class="header__inner">
+                <div class="header__logo">
+                    <a href="#"> <img src="assets/img/Test04/logo.jpg" alt="로고"> </a>
+                </div>
+                <div class="header__menu">
+                    <ul>
+                        <li><a href="#">무역통상정보</a></li>
+                        <li><a href="#">회원/업무지원</a></li>
+                        <li><a href="#">무역통계</a></li>
+                        <li><a href="#">협회안내</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- // headerType -->
+
+        <header id="sliderType01">
+            <div class="slider__wrap">
+                <div class="slider__img">
+                    <div class="slider__inner">
+                        <div class="slider"><img src="assets/img/Test04/slide.jpg" alt="이미지1"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- // banner slider Type -->
+
+        <section id="notice1">
+            <div class="notice1__wrap">
+                <h2>KITA 사업 일정</h2>
+                <div class="box__wrap">
+                    <div class="notice__box">
+                        <span class="d-day">모집마감 -4일</span>
+                        <h3>『2019 태국 국제식품전시회』업체모집</h3>
+                        <div class="period">
+                            <em>사업기간</em> 2019-05-28 ~ 2019-06-01 <br>
+                            <em>모집기간</em> 2019-01-17 ~ 2019-02-12
+                        </div>
+                    </div>
+
+                    <div class="notice__box">
+                        <span class="d-day">모집마감 -4일</span>
+                        <h3>[아카데미] 무역실무기초 단기속성(1차, 야간) 개최</h3>
+                        <div class="period">
+                            <em>사업기간</em> 2019-02-18 ~ 2019-02-22 <br>
+                            <em>모집기간</em> 2019-01-23 ~ 2019-02-12
+                        </div>
+                    </div>
+
+                    <div class="notice__box">
+                        <span class="d-day">모집마감 -4일</span>
+                        <h3>해외 온라인판매 글로벌 셀러 양성 과정 참가자 모집</h3>
+                        <div class="period">
+                            <em>사업기간</em> 2019-02-14 ~ 2019-03-05 <br>
+                            <em>모집기간</em> 2019-01-25 ~ 2019-02-12
+                        </div>
+                    </div>
+
+                    <div class="notice__box">
+                        <span class="d-day">모집마감 -4일</span>
+                        <h3>대전 수출활력 촉진단 행사 개최 (2/14)</h3>
+                        <div class="period">
+                            <em>사업기간</em> 2019-02-14 ~ 2019-02-14 <br>
+                            <em>모집기간</em> 2019-02-01 ~ 2019-02-12
+                        </div>
+                    </div>
+                </div>
+                <div class="plus">+</div>
+            </div>
+        </section>
+        <!-- // notice1 -->
+
+        <section id="notice2">
+            <div class="bodojaryo">
+                <h3>보도자료 | <em>언론기고</em></h3>
+                <ul class="document__title">
+                    <li class="title">민관합동 현장중심 수출활력촉진단 가동</li>
+                    <li class="date">2019-01-31</li>
+                </ul>
+                <ul class="document__title">
+                    <li class="title">민간기업이 주도하는 유럽 스타트업 캠퍼스</li>
+                    <li class="date">2019-01-29</li>
+                </ul>
+                <div class="plus">+</div>
+            </div>
+            <div class="yeongubogoseo">
+                <h3>KITA 연구보고서</h3>
+                <ul class="document__title">
+                    <li><em>[Trade Brief]</em>2019년 수출기업의 경영환경 전망 조사</li>
+                    <li><em>[KITA]</em>[토론회 자료] WTO 전자상거래 협상을 위한 공청회 겸 디지털통상정책 토론회 발…</li>
+                    <li><em>[KITA]</em>[설명회 자료] 브렉시트(Brexit) 설명회 발표자료</li>
+                    <li><em>[Trade Brief]</em>스타트업 사례를 통해 본 2018 중국 AI시장 트렌드</li>
+                </ul>
+                <ul class="document__date">
+                    <li>2019-01-17</li>
+                    <li>2019-01-16</li>
+                    <li>2019-01-10</li>
+                    <li>2019-01-10</li>
+                </ul>
+                <div class="plus">+</div>
+            </div>
+        </section>
+        <!-- // notice2 -->
+
+        <section id="notice3">
+            <div class="onlineseminar">
+                <h3>온라인세미나</h3>
+                <p>무역협회에서 실시하는 국내 무역 관련 세미나,<br>설명회 등을 VOD 서비스로 제공</p>
+                <a href="#" class="btn">바로가기</a>
+            </div>
+            <div class="tongsangjeongbo">
+                <h3>KITA 통상정보</h3>
+                <div class="document__flex">
+                    <div class="tongsangjeongbo__doc1">
+                        <ul class="document__title">
+                            <li class="title">한미 통상현안 사례분석집</li>
+                            <li class="date">2019-01-15</li>
+                        </ul>
+                        <ul class="document__title">
+                            <li class="title">[통상리포트] 킥오프된 브렉시트 후반전 : 향후 통…</li>
+                            <li class="date">2018-10-31</li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="tongsangjeongbo__doc2">
+                        <ul class="document__title">
+                            <li class="title">[통상리포트]2018년 통상이슈 점검 및 2019년 통…</li>
+                            <li class="date">2018-12-10</li>
+                        </ul>
+                        <ul class="document__title">
+                            <li class="title">[통상리포트] 미중 통상 분쟁 영향 및 시사점</li>
+                            <li class="date">2018-10-30</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="plus">+</div>
+        </section>
+        <!-- // notice3 -->
+
+    </div>
+    <footer id="footerType">
+        <div class="footer__wrap container">
+            <div class="footer__menu">
+                <ul>
+                    <li><a href="#">이용약관</a></li>
+                    <li>|</li>
+                    <li><a href="#">개인정보처리 방침</a></li>
+                    <li>|</li>
+                    <li><a href="#">저작권 정책</a></li>
+                    <li>|</li>
+                    <li><a href="#">이메일주소무단수집거부</a></li>
+                    <li>|</li>
+                    <li><a href="#">온라인 고객상담</a></li>
+                    <li>|</li>
+                    <li><a href="#">신문고</a></li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <div class="footer__info">
+                <figure class="footer__logo">
+                    <img src="assets/img/Test04/footer_logo.jpg" alt="footer로고">
+                </figure>
+                <div class="footer__address">
+                    <p>(06164) 서울시 강남구 영동대로 511 (삼성동)</p>
+                    <p>Copyright ⓒ KITA All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- // footerType -->
+
+    <script src="assets/js/highlight.min.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>
