@@ -21,7 +21,7 @@ https://fkdldhs8484.github.io/coding2/html/alphabet.html
 https://fkdldhs8484.github.io/coding2/css/index.html
 
 ### 자바스크립트 페이지
-https://fkdldhs8484.github.io/coding2/javascript/index.html
+https://fkdldhs8484.github.io/coding2/javascript/index.html   
 https://fkdldhs8484.github.io/coding2/javascript/javascript01.html
 https://fkdldhs8484.github.io/coding2/javascript/javascript02.html
 https://fkdldhs8484.github.io/coding2/javascript/javascript03.html
