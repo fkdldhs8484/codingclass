@@ -22,7 +22,7 @@ https://fkdldhs8484.github.io/codingclass/html/alphabet.html
 https://fkdldhs8484.github.io/codingclass/css/index.html 
 
 ### 사이트 제작하기 1
-https://fkdldhs8484.github.io/codingclass/site/site1_res/index.html
+https://fkdldhs8484.github.io/codingclass/site/site1/index.html
 
 ###  사이트 제작하기 2
 https://fkdldhs8484.github.io/codingclass/site/site4_01/
