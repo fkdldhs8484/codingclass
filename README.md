@@ -1,9 +1,5 @@
 # coding
 
-## 메인
-
-https://fkdldhs8484.github.io/coding2/index.html
-
 ### 메인 페이지1
 
 http://127.0.0.1:5502/index.html
