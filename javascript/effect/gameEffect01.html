@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../assets/css/bg.css" />
     <link rel="stylesheet" href="../assets/css/game.css" />
     <link rel="stylesheet" href="../assets/css/music.css" />
+    <link rel="stylesheet" href="../assets/css/memory.css" />
 
     <link rel="stylesheet" href="../assets/css/search02.css" />
     <link rel="stylesheet" href="../assets/css/search_an1.css" />
@@ -1120,28 +1121,132 @@
           <div class="memory__card">
             <ul class="cards">
               <li>
-                <div></div>
-                <div></div>
+                <div class="view front">
+                  <img src="/assets/img/Pumpkin&Cat-01.svg" alt="" />
+                </div>
+                <div class="view back">
+                  <img src="/assets/img/Pumpkin&Cat-09.svg" alt="" />
+                </div>
               </li>
               <li>
-                <div></div>
-                <div></div>
+                <div class="view front">
+                  <img src="/assets/img/Pumpkin&Cat-01.svg" alt="" />
+                </div>
+                <div class="view back">
+                  <img src="/assets/img/Pumpkin&Cat-02.svg" alt="" />
+                </div>
               </li>
               <li>
-                <div></div>
-                <div></div>
+                <div class="view front">
+                  <img src="/assets/img/Pumpkin&Cat-01.svg" alt="" />
+                </div>
+                <div class="view back">
+                  <img src="/assets/img/Pumpkin&Cat-03.svg" alt="" />
+                </div>
               </li>
               <li>
-                <div></div>
-                <div></div>
+                <div class="view front">
+                  <img src="/assets/img/Pumpkin&Cat-01.svg" alt="" />
+                </div>
+                <div class="view back">
+                  <img src="/assets/img/Pumpkin&Cat-04.svg" alt="" />
+                </div>
               </li>
               <li>
-                <div></div>
-                <div></div>
+                <div class="view front">
+                  <img src="/assets/img/Pumpkin&Cat-01.svg" alt="" />
+                </div>
+                <div class="view back">
+                  <img src="/assets/img/Pumpkin&Cat-05.svg" alt="" />
+                </div>
               </li>
               <li>
-                <div></div>
-                <div></div>
+                <div class="view front">
+                  <img src="/assets/img/Pumpkin&Cat-01.svg" alt="" />
+                </div>
+                <div class="view back">
+                  <img src="/assets/img/Pumpkin&Cat-06.svg" alt="" />
+                </div>
+              </li>
+              <li>
+                <div class="view front">
+                  <img src="/assets/img/Pumpkin&Cat-01.svg" alt="" />
+                </div>
+                <div class="view back">
+                  <img src="/assets/img/Pumpkin&Cat-07.svg" alt="" />
+                </div>
+              </li>
+              <li>
+                <div class="view front">
+                  <img src="/assets/img/Pumpkin&Cat-01.svg" alt="" />
+                </div>
+                <div class="view back">
+                  <img src="/assets/img/Pumpkin&Cat-08.svg" alt="" />
+                </div>
+              </li>
+              <li>
+                <div class="view front">
+                  <img src="/assets/img/Pumpkin&Cat-01.svg" alt="" />
+                </div>
+                <div class="view back">
+                  <img src="/assets/img/Pumpkin&Cat-09.svg" alt="" />
+                </div>
+              </li>
+              <li>
+                <div class="view front">
+                  <img src="/assets/img/Pumpkin&Cat-01.svg" alt="" />
+                </div>
+                <div class="view back">
+                  <img src="/assets/img/Pumpkin&Cat-02.svg" alt="" />
+                </div>
+              </li>
+              <li>
+                <div class="view front">
+                  <img src="/assets/img/Pumpkin&Cat-01.svg" alt="" />
+                </div>
+                <div class="view back">
+                  <img src="/assets/img/Pumpkin&Cat-03.svg" alt="" />
+                </div>
+              </li>
+              <li>
+                <div class="view front">
+                  <img src="/assets/img/Pumpkin&Cat-01.svg" alt="" />
+                </div>
+                <div class="view back">
+                  <img src="/assets/img/Pumpkin&Cat-04.svg" alt="" />
+                </div>
+              </li>
+              <li>
+                <div class="view front">
+                  <img src="/assets/img/Pumpkin&Cat-01.svg" alt="" />
+                </div>
+                <div class="view back">
+                  <img src="/assets/img/Pumpkin&Cat-05.svg" alt="" />
+                </div>
+              </li>
+              <li>
+                <div class="view front">
+                  <img src="/assets/img/Pumpkin&Cat-01.svg" alt="" />
+                </div>
+                <div class="view back">
+                  <img src="/assets/img/Pumpkin&Cat-06.svg" alt="" />
+                </div>
+              </li>
+              <li>
+                <div class="view front">
+                  <img src="/assets/img/Pumpkin&Cat-01.svg" alt="" />
+                </div>
+                <div class="view back">
+                  <img src="/assets/img/Pumpkin&Cat-07.svg" alt="" />
+                </div>
+              </li>
+              <li>
+                <div class="view front">
+                  <img src="/assets/img/Pumpkin&Cat-01.svg" alt="" />
+                </div>
+                <div class="view back">
+                  <img src="/assets/img/Pumpkin&Cat-08.svg" alt="" />
+                </div>
               </li>
             </ul>
           </div>
@@ -1155,6 +1260,7 @@
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="../assets/js/gsap.min.js"></script>
     <script src="../assets/js/music.js"></script>
+    <script src="../assets/js/memory.js"></script>
     <script src="../assets/js/searchGame.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script src="../assets/js/common.js"></script>
@@ -1188,7 +1294,7 @@
           $(".cursor img").attr("src", "../assets/img/figma.png");
         },
       });
-      $(".music__wrap").draggable({
+      $(".music__wrap, .memory__wrap").draggable({
         drag: function () {
           $(".cursor img").attr("src", "../assets/img/figma.png");
         },
