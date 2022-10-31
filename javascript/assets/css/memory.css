@@ -69,6 +69,18 @@
   animation: shakeY 1s 1;
 }
 
+.close-bt {
+  float: right;
+  width: 24px;
+  height: 24px;
+  background: url(/javascript/assets/img/music__control.svg) no-repeat;
+  background-size: 200px;
+  background-position: -178px 0;
+  margin-top: 5px;
+  margin-right: 4px;
+  vertical-align: -4px;
+}
+
 @keyframes flicker {
   0%,
   19%,
@@ -78,9 +90,9 @@
   54%,
   56%,
   100% {
-    box-shadow: 0 0 0.5rem #fff, inset 0 0 0.5rem #fff,
-      0 0 2rem rgb(108, 76, 117), inset 0 0 2rem rgb(108, 76, 117),
-      0 0 4rem rgb(108, 76, 117), inset 0 0 4rem rgb(108, 76, 117);
+    box-shadow: 0 0 0.5rem #fff, 0 0 2rem rgb(108, 76, 117),
+      inset 0 0 2rem rgb(108, 76, 117), 0 0 4rem rgb(108, 76, 117),
+      inset 0 0 4rem rgb(108, 76, 117);
   }
 }
 

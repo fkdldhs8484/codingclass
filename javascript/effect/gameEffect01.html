@@ -1118,6 +1118,7 @@
 
       <div class="memory__wrap">
         <div class="memory__inner">
+          <span class="close-bt"></span>
           <div class="memory__card">
             <ul class="cards">
               <li>
@@ -1405,6 +1406,13 @@
       });
       document.querySelector(".close-button").addEventListener("click", () => {
         document.querySelector(".search__wrap").style.display = "none";
+      });
+
+      document.querySelector(".icon3").addEventListener("click", () => {
+        document.querySelector(".memory__wrap").style.display = "block";
+      });
+      document.querySelector(".close-bt").addEventListener("click", () => {
+        document.querySelector(".memory__wrap").style.display = "none";
       });
 
       window.onload = function () {
