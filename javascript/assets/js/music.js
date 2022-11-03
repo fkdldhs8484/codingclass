@@ -1,7 +1,7 @@
 const allMusic = [
     {
-        name: "music_audio01",
-        artist: "Patrick Patrikios",
+        name: "Sasha Alex Slone",
+        artist: "Dancing With Your Ghost",
         img: "music_v01",
         audio: "music_audio01",
     },
@@ -54,7 +54,7 @@ const allMusic = [
         audio: "music_audio09",
     },
 ];
-
+const musicFooter = document.querySelector(".music__footer .close-btn"); // 닫기 버튼
 const musicWrap = document.querySelector(".music__wrap");
 const musicView = musicWrap.querySelector(".music__view .img img");
 const musicName = musicWrap.querySelector(".music__view .title h3");
@@ -317,4 +317,10 @@ const audio = document.getElementById("main-audio");
 const audioVolume = document.getElementById("volume-control");
 audioVolume.addEventListener("change", function (e) {
     audio.volume = this.value / 10;
+});
+
+// 음악 플레이어 닫기 버튼
+musicFooter.addEventListener("click", () => {
+    musicWrap.classList.remove("show");
+    musicAudio.pause(); // 닫으면 음악 재생정지
 });

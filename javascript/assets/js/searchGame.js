@@ -1,42 +1,56 @@
 const cssProperty = [
-    { num: 1, name: "accent-color", desc: " 요소의 강조 색상을 지정합니다. " },
+    //all, animation, background, flex, grid, string, table
+    {
+        num: 1,
+        category: "flex",
+        name: "accent-color",
+        desc: " 요소의 강조 색상을 지정합니다. ",
+    },
     {
         num: 2,
+        category: "flex",
         name: "align-content",
-        desc: " 콘텐츠 사이와 콘텐츠 주위 빈 공간을 플렉스 박스의 교차축 또는 그리드의 블록 축을 따라 배치하는 방식을 결정합니다.",
+        desc: " 콘텐츠 사이와 콘텐츠 주위 빈 공간을 플렉스 박스'의 교차축 또는 그리드의 블록 축을 따라 배치하는 방식을 결정합니다.",
     },
     {
         num: 3,
+        category: "flex",
         name: "align-items",
         desc: " 교차축에서 아이템 정렬 하는 속성입니다. 주로 flex에서 item들을 정렬할 때 사용됩니다.",
     },
     {
         num: 4,
+        category: "flex",
         name: "align-self",
         desc: " 특정 item의 정렬을 따로 하고 싶을 때 사용합니다.",
     },
     {
         num: 5,
+        category: "all",
         name: "all",
         desc: " CSS 사용자 지정 속성을 제외한 모든 속성을 초기화합니다. 초깃값, 상속값, 아니면 다른 스타일시트 출처의 값로 설정할 수 있습니다.",
     },
     {
         num: 6,
+        category: "animation",
         name: "animation",
         desc: " 애니메이션과 관련된 속성을 일괄적로 처리합니다.",
     },
     {
         num: 7,
+        category: "animation",
         name: "animation-delay",
         desc: " 애니메이션 지연 시간을 설정합니다.",
     },
     {
         num: 8,
+        category: "animation",
         name: "animation-direction",
         desc: " 애니메이션 움직임 방향을 설정합니다.",
     },
     {
         num: 9,
+        category: "animation",
         name: "animation-duration",
         desc: " 애니메이션 움직인 시간을 설정합니다.",
     },
@@ -778,7 +792,7 @@ const cssProperty = [
         name: "grid-template-areas",
         desc: " 레이아웃이 어떤 형태로 구성되는지 설계도의 역할을 한다.",
     },
-    { num: 172, name: "grid-template-columns", desc: " 열 넓이를 지정한다." },
+    { num: 172, name: " grid-template-columns", desc: " 열 넓이를 지정한다." },
     { num: 173, name: "grid-template-rows", desc: " 행 높이를 지정한다." },
     {
         num: 174,
@@ -1721,7 +1735,7 @@ const cssProperty = [
     {
         num: 376,
         name: "widows",
-        desc: " 표시해야하는 블록 컨테이너 선의 최소 개수 설정 상부 (A)의 페이지 , 영역 또는 컬럼 .",
+        desc: " 표시해야하는 블록 컨테이너 선의 최소 개수 설정 상부의 페이지 , 영역 또는 컬럼 .",
     },
     { num: 377, name: "width", desc: " 블록 레벨 요소의 너비를 지정한다." },
     {
@@ -1746,7 +1760,6 @@ const cssProperty = [
         desc: " 엘리먼트의 겹쳐지는 순서를 지정한다.",
     },
 ];
-document.querySelector(".search__info span").innerHTML = cssProperty.length;
 
 const searchTime = document.querySelector(".time span");
 const searchList = document.querySelector(".search__list");
@@ -1755,12 +1768,16 @@ const searchMissAnswers = document.querySelector(".search__missAnswers");
 const searchStart = document.querySelector(".search__box .start");
 const searchInput = document.querySelector("#search");
 const searchAudio = document.querySelector("#audio");
-const musicPlay = document.querySelector(".search__audio .play");
-const musicStop = document.querySelector(".search__audio .stop");
+const searchAudioPlay = document.querySelector(".search__audio .play");
+const searchAudioStop = document.querySelector(".search__audio .stop");
 const searchScoreNow = document.querySelector(".search__info .now");
 const searchResult = document.querySelector(".search__result .result");
 const searchResultWrap = document.querySelector(".search__result");
 const searchRestart = document.querySelector(".search__result .restart");
+const searchCloseButton = document.querySelector(".search__wrap .close-button");
+const searchWrap = document.querySelector(".search__wrap");
+const searchCount = document.querySelector(".search__info .search__count span"); //전체 속성
+const searchTotal = document.querySelector(".search__info .search__total span"); // 맞춘 갯수
 
 let timeReamining = 120, // 남은 시간
     timeInterval = "",
@@ -1790,28 +1807,15 @@ function startQuiz() {
     // 속성 리스트 없애기
 
     // 음악 추가
-    music();
+    searchAudio.play();
+    searchAudioStop.style.display = "none";
+    searchAudioPlay.style.display = "block";
 
     // 점수 계산
-    let score = 0;
+    searchTotal.innerText = cssProperty.length;
 
     // 정답 체크
     checkAnswers();
-}
-
-// 음악 재생
-function music() {
-    musicStop.addEventListener("click", () => {
-        musicStop.style.display = "none";
-        musicPlay.style.display = "inline";
-        searchAudio.pause();
-    });
-    musicPlay.addEventListener("click", () => {
-        musicPlay.style.display = "none";
-        musicStop.style.display = "inline";
-        searchAudio.play();
-    });
-    searchAudio.play();
 }
 
 // 인풋 체크하기
@@ -1819,37 +1823,38 @@ function checkInput() {
     let input = event.currentTarget.value.trim().toLowerCase(); // 사용자가 입력한 값 가져오기
 
     if (answers.hasOwnProperty(input) && !answers[input]) {
-        answers[input] = true;
+        answers[input] = true; //정답일 경우 true로 바꿔주기
+        score++; //점수++
 
-        // 정답 표시
+        //정답표시
         searchAnswers.style.display = "block";
         searchAnswers.innerHTML += `<span>${input}</span>`;
+        //점수 표시
+        searchCount.innerHTML = score;
 
-        // 점수 반영
-        score++;
-        searchScoreNow.innerText = score;
+        //정답 사운드
+        // searchAudioC.play();
 
-        // 정답 초기화
+        //정답 초기화
         searchInput.value = "";
     }
 }
-
 // 정답 체크하기 : 정답을 객체 파일로 만들기
 function checkAnswers() {
     cssProperty.forEach((item) => {
-        let answer = item.name.trim().toLocaleLowerCase();
+        let answer = item.name.trim().toLowerCase();
         answers[answer] = false;
     });
+    // console.log(answers);
 }
 
 // 오답 보여주기
 function missAnswers() {
     searchMissAnswers.style.display = "block";
-
-    cssProperty.forEach((item) => {
-        let answer = item.name.trim().toLocaleLowerCase();
+    cssProperty.forEach((miss) => {
+        let answer = miss.name.trim().toLowerCase();
         if (answers[answer] == false) {
-            searchMissAnswers.innerHTML += `<span>${item.name}</span>`;
+            searchMissAnswers.innerHTML += `<span>${miss.name}</span>`;
         }
     });
 }
@@ -1871,7 +1876,7 @@ function displayTime() {
         let minutes = Math.floor(timeReamining / 60);
         let seconds = timeReamining % 60;
 
-        // 초 단위가 한자리수일 때 0 추가
+        //초 단위가 한자리 수일 때 0추가
         if (seconds < 10) seconds = "0" + seconds;
         return minutes + ":" + seconds;
     }
@@ -1888,6 +1893,8 @@ function endQuiz() {
 
     // 음악 끄기
     searchAudio.pause();
+    searchAudioPlay.style.display = "none";
+    searchAudioStop.style.display = "block";
 
     // 시간 정지
     clearInterval(timeInterval);
@@ -1900,16 +1907,37 @@ function endQuiz() {
 
 // 다시 시작하기
 function restart() {
-    searchResultWrap.classList.remove("show");
-    searchAudio.play();
+    setTimeout(() => {
+        searchResultWrap.classList.remove("show");
+        timeReamining = 120;
+        Score = 0;
+        searchCount.innerText = "0";
 
-    startQuiz();
-    timeReamining = 120; // 시간
-    score = 0;
-    searchScoreNow.innerText = 0;
+        searchAnswers.innerHTML = "";
+        searchMissAnswers.innerHTML = "";
+
+        startQuiz();
+    }, 1000);
 }
 
 // 버튼 이벤트
 searchStart.addEventListener("click", startQuiz); // 게임 시작
 searchInput.addEventListener("input", checkInput);
 searchRestart.addEventListener("click", restart);
+searchAudioPlay.addEventListener("click", () => {
+    searchAudioPlay.style.display = "none";
+    searchAudioStop.style.display = "block";
+    searchAudio.pause();
+});
+searchAudioStop.addEventListener("click", () => {
+    searchAudioPlay.style.display = "block";
+    searchAudioStop.style.display = "none";
+    searchAudio.play();
+});
+searchRestart.addEventListener("click", restart);
+
+// 닫기 버튼
+searchCloseButton.addEventListener("click", () => {
+    searchWrap.classList.remove("show");
+    searchAudio.pause(); // 닫으면 음악 재생정지
+});
