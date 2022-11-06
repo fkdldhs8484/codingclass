@@ -1779,10 +1779,10 @@ const searchWrap = document.querySelector(".search__wrap");
 const searchCount = document.querySelector(".search__info .search__count span"); //전체 속성
 const searchTotal = document.querySelector(".search__info .search__total span"); // 맞춘 갯수
 
-let timeReamining = 120, // 남은 시간
-    timeInterval = "",
-    score = 0, // 점수
-    answers = {}; // 새로운 정답
+let timeReamining = 120, //남은시간
+    timeInterval = "", //시간 간격
+    Score = 0, //점수
+    answers = {}; //새로운 정답
 
 function updateList() {
     cssProperty.forEach((data) => {
@@ -1818,28 +1818,28 @@ function startQuiz() {
     checkAnswers();
 }
 
-// 인풋 체크하기
+//인풋 체크하기
 function checkInput() {
-    let input = event.currentTarget.value.trim().toLowerCase(); // 사용자가 입력한 값 가져오기
+    let input = event.currentTarget.value.trim().toLowerCase();
 
     if (answers.hasOwnProperty(input) && !answers[input]) {
+        //정답 사운드
+        goodJobSound.play();
+
         answers[input] = true; //정답일 경우 true로 바꿔주기
-        score++; //점수++
+        Score++; //점수++
 
         //정답표시
         searchAnswers.style.display = "block";
         searchAnswers.innerHTML += `<span>${input}</span>`;
         //점수 표시
-        searchCount.innerHTML = score;
+        searchCount.innerHTML = Score;
 
-        //정답 사운드
-        // searchAudioC.play();
-
-        //정답 초기화
+        //정답란 초기화
         searchInput.value = "";
     }
 }
-// 정답 체크하기 : 정답을 객체 파일로 만들기
+//정답 체크하기 : 정답을 객체 파일로 만들기
 function checkAnswers() {
     cssProperty.forEach((item) => {
         let answer = item.name.trim().toLowerCase();
@@ -1859,7 +1859,7 @@ function missAnswers() {
     });
 }
 
-// 시간 설정하기 0:00
+//시간 설정하기
 function reduceTime() {
     timeReamining--;
 
@@ -1882,13 +1882,15 @@ function displayTime() {
     }
 }
 
-// 게임이 끝났을 때
+//게임 끝났을 때
 function endQuiz() {
-    // 시작 버튼 만들기
+    // alert("게임이 끝났습니다.");
+    clearSound.play();
+    //시작버튼 만들기
     searchStart.style.display = "block";
     searchStart.style.pointerEvents = "none";
 
-    // 오답 보여주기
+    //오답 보여주기
     missAnswers();
 
     // 음악 끄기
@@ -1896,13 +1898,13 @@ function endQuiz() {
     searchAudioPlay.style.display = "none";
     searchAudioStop.style.display = "block";
 
-    // 시간 정지
+    //시간 정지
     clearInterval(timeInterval);
 
-    // 메시지 출력
+    //메세지 출력
     searchResultWrap.classList.add("show");
-    let point = Math.round((score / cssProperty.length) * 100);
-    searchResult.innerHTML = `게임이 종료되었습니다.<br>${cssProperty.length}개 중 ${score}개를 맞혔습니다.<br>점수는 ${point}점입니다.`;
+    let point = Math.round((Score / cssProperty.length) * 100);
+    searchResult.innerHTML = `게임이 끝났습니다.<br> 당신은 ${cssProperty.length}개 중에 ${Score}개를 맟추셨습니다.<br>점수는 ${point}점 입니다.`;
 }
 
 // 다시 시작하기
