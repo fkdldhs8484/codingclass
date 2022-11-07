@@ -83,4 +83,4 @@ https://stately-gumdrop-7b8776.netlify.app/javascript/effect/parallaxeffect07
 
 ### 게임 이펙트
 
-https://stately-gumdrop-7b8776.netlify.app/javascript/effect/gameeffect01
+https://fkdldhs8484.github.io/codingclass/javascript/effect/gameEffect01.html
