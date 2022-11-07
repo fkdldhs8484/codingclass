@@ -46,7 +46,7 @@
     <!-- header -->
 
     <main id="main">
-      <div class="cursor"></div>
+      <div class="mouse__cursor"></div>
       <div class="icon_box">
         <div class="icon1">
           <img src="../assets/img/icon1.png" alt="뮤직" />
@@ -1322,10 +1322,11 @@
         },
       });
 
-      const cursor = document.querySelector(".cursor");
+      // cursor
+      const cursor = document.querySelector(".mouse__cursor");
 
       window.addEventListener("mousemove", (e) => {
-        cursor.style.left = e.clientX + "px"; //단위 꼭 붙여주기
+        cursor.style.left = e.clientX + "px";
         cursor.style.top = e.clientY + "px";
       });
 
