@@ -166,11 +166,9 @@
   display: inline-block;
   width: 24px;
   height: 24px;
-  background: url(/javascript/assets/img/music__control.svg) no-repeat;
-  background-size: 200px;
-  background-position: -87px 0;
-  margin-right: 5px;
-  vertical-align: -4px;
+  background: url(../img/music__control.svg);
+  background-size: 242px;
+  background-position: 131px 0;
 }
 .music__list ul {
   max-height: 200px;
@@ -202,7 +200,7 @@
   float: right;
   width: 24px;
   height: 24px;
-  background: url(/javascript/assets/img/music__control.svg) no-repeat;
+  background: url(../img/music__control.svg);
   background-size: 200px;
   background-position: -178px 0;
   margin-top: 3px;
