@@ -1,12 +1,13 @@
 .close-bt {
-    position: absolute;
-    top: 8px;
-    right: 13px;
-    background: url(/javascript/assets/img/music__control.svg) no-repeat;
+    float: right;
     width: 24px;
     height: 24px;
-    background-size: 232px;
-    background-position: -205px;
+    background: url(../img/music__control.svg);
+    background-size: 200px;
+    background-position: -178px 0;
+    margin-top: 3px;
+    margin-right: 5px;
+    vertical-align: -4px;
 }
 .memory__wrap {
     display: none;
