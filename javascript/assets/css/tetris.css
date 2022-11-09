@@ -1,0 +1,110 @@
+.tetris__wrap {
+  display: none;
+}
+.tetris__inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.tetris__header {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.tetris__start {
+}
+
+.tetris__restart {
+}
+
+.tetris__play {
+}
+
+.playground {
+}
+.playground > ul {
+  border: 2px solid #323232;
+}
+
+.playground > ul > li {
+  list-style: none;
+  width: 100%;
+  height: 30px;
+}
+
+.playground > ul > li > ul {
+  display: flex;
+}
+
+.playground > ul > li > ul > li {
+  list-style: none;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #d0d0d0;
+}
+
+.Tmino {
+  border: 6px #a042a2 outset !important;
+  background-color: #952d98;
+}
+.Lmino {
+  border: 6px #ff861a outset !important;
+  background-color: #ff7900;
+}
+.Jmino {
+  border: 6px #1a74c4 outset !important;
+  background-color: #0065bd;
+}
+.Zmino {
+  border: 6px #ef3e4d outset !important;
+  background-color: #ed2939;
+}
+.Smino {
+  border: 6px #78c53e outset !important;
+  background-color: #69be28;
+}
+.Omino {
+  border: 6px #fed01a outset !important;
+  background-color: #fecb00;
+}
+.Imino {
+  border: 6px #1aa9de outset !important;
+  background-color: #009fda;
+}
+
+.tetris__info {
+  display: none;
+  width: 30%;
+  height: 10px;
+  background: #000;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px 30px 70px;
+  border-radius: 10px;
+  border: 3px solid #fff;
+}
+.tetris__info.show {
+  display: block;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.tetris__start__btn {
+  display: inline-block;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translateX(-50%);
+  font-size: 50px;
+  font-size: 30px;
+}
