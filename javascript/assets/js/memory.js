@@ -6,7 +6,7 @@ const memoryWrap = document.querySelector(".memory__wrap");
 const memoryCard = document.querySelector(".memory__card");
 const memoryCards = document.querySelectorAll(".cards li");
 const GameOverPopup = document.querySelector(".memory__gameOver__msg");
-const gameOverH3 = document.querySelector(".memory__gameOver__msg h3");
+// const gameOverH3 = document.querySelector(".memory__gameOver__msg h3");
 const gameOverScore = document.querySelector(".gameOver__msg");
 const retryBtn = document.querySelector(".memory__retry__btn");
 const scoree = document.querySelector(".memory__score > span");
@@ -164,15 +164,4 @@ const memoryCloseBtn = document.querySelector(".memory__close__btn");
 
 memoryCloseBtn.addEventListener("click", () => {
     memoryReset();
-});
-
-// 메모리게임
-const memoryIcon = document.querySelector(".icon3");
-const memoryWrap1 = document.querySelector(".memory__wrap");
-const memoryClose = document.querySelector(".memory__close__btn");
-memoryIcon.addEventListener("click", () => {
-    memoryWrap1.classList.toggle("show");
-});
-memoryClose.addEventListener("click", () => {
-    memoryWrap1.classList.remove("show");
 });

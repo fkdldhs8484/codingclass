@@ -77,7 +77,6 @@ const musicProgressDuration = musicWrap.querySelector(
 const musicRepeat = musicWrap.querySelector("#control-repeat");
 
 let musicIndex = 1; // 현재 음악 인덱스
-musicAudio.play();
 
 //음악재생
 function loadMusic(num) {
@@ -85,7 +84,7 @@ function loadMusic(num) {
     musicArtist.innerText = allMusic[num - 1].artist; //뮤직 아티스트 가져오기
     musicView.src = `../assets/img/${allMusic[num - 1].img}.png`; //뮤직 이미지 가져오기
     musicView.alt = allMusic[num - 1].name; //뮤직 이미지 alt 가져오기
-    musicAudio.src = `../assets/audio/${allMusic[num - 1].audio}.mp3`; //뮤직 오디오 가져오기
+    musicAudio.src = "../assets/audio/" + allMusic[num - 1].audio + ".mp3"; //뮤직 오디오 가져오기
 }
 
 //재생버튼
