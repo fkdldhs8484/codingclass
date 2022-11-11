@@ -1,0 +1,105 @@
+/* headerType */
+.header__inner {
+  width: 100%;
+
+  align-items: center;
+  padding: 20px 50px;
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  background: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__logo h1 a {
+  font-size: 30px;
+  font-weight: 600;
+  color: brown;
+  align-items: center;
+  display: flex;
+}
+
+.header__menu {
+  /* width: 70%; */
+  text-align: center;
+}
+.header__menu li {
+  display: inline-block;
+  padding: 0px 30px;
+}
+.header__menu li a {
+  padding: 10px;
+}
+
+.header__menu li a:hover {
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+.header__ham {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 1000;
+  width: 50px;
+  height: 50px;
+  display: none;
+  cursor: pointer;
+}
+.header__ham span {
+  display: block;
+  background: #000;
+  width: 30px;
+  height: 2px;
+  border-radius: 3px;
+  margin-left: 10px;
+  margin-top: 5px;
+  transition: 0.25s margin 0.25s, 0.25s transform;
+}
+
+.Type {
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.textType {
+  width: 50%;
+  padding: 5px 10px;
+}
+
+.Type__tatbl {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.Type__tatbl a {
+  font-size: 16px;
+  font-weight: normal;
+  width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.Type__tatbl em {
+  width: 20%;
+}
+
+.bannerType {
+  width: 50%;
+  background: url(../img/banner01.jpg);
+}
+
+.bannerType__img {
+}
+
+.imageType {
+  width: 50%;
+  background: url(../img/card01.jpg);
+}
+
+.imageType__img {
+}

@@ -1,0 +1,13 @@
+.slider__inner {
+  margin-top: 70px;
+}
+.slider {
+  position: relative;
+}
+.slider__img {
+  background: url(../img/blog01.jpg);
+  width: 1160px;
+  height: 100px;
+  margin: 0 auto;
+  padding: 100px 20px;
+}
