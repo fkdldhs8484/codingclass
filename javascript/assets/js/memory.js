@@ -165,3 +165,14 @@ const memoryCloseBtn = document.querySelector(".memory__close__btn");
 memoryCloseBtn.addEventListener("click", () => {
     memoryReset();
 });
+
+function memoryReset() {
+    cardOne = cardTwo = "";
+    disableDeck = false;
+    matchedCard = 0;
+    matchScore = 100;
+    score.innerText = "0";
+    memoryCards.forEach((card) => {
+        card.classList.remove("flip");
+    });
+}
