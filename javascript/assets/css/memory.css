@@ -11,8 +11,11 @@
 }
 .memory__wrap {
     display: none;
-
-    overflow: hidden;
+    position: absolute;
+    user-select: none;
+}
+.memory__wrap.show {
+    display: block;
 }
 .memory__inner {
     width: 700px;

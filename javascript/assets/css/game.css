@@ -159,6 +159,13 @@ body {
     text-align: center;
 }
 
+.tetris__gif {
+    position: absolute;
+    right: 30px;
+    top: 640px;
+    width: 30%;
+}
+
 /* cursor */
 .mouse__cursor {
     background: url(../img/cursor.svg) no-repeat;
