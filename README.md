@@ -1,7 +1,7 @@
 # coding
 
 ### HTML 메인 페이지
-https://fkdldhs8484.github.io/codingclass/class/index.html
+https://fkdldhs8484.github.io/codingclass/index.html
 
 ### 자바스크립트 페이지
 
