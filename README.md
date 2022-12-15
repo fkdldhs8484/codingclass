@@ -3,10 +3,6 @@
 ### HTML 메인 페이지
 https://fkdldhs8484.github.io/codingclass/class/index.html
 
-### CSS 메인 페이지
-
-https://fkdldhs8484.github.io/coding2/css/index.html
-
 ### 자바스크립트 페이지
 
 https://fkdldhs8484.github.io/coding2/javascript/index.html  
