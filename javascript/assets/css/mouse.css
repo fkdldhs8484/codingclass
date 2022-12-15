@@ -10,8 +10,7 @@ body {
   overflow: hidden;
 }
 body.img01 {
-  background: #000 url(/javascript/assets/img/effect_bg01@2x-min.jpg) no-repeat
-    center / cover;
+  background: #000 url(../img/effect_bg01@2x-min.jpg) no-repeat center / cover;
 }
 body.img02 {
   background: #000 url(/javascript/assets/img/effect_bg02@2x-min.jpg) no-repeat
