@@ -1,0 +1,50 @@
+#header {
+ border-right: 1px solid #e3e3e3;
+}
+#header h1 {
+    font-family: 'SebangGothic';
+    color: #E16120;
+    font-size: 40px;
+    padding: 138px 74px 65px 74px;
+    font-weight: bold;
+    border-bottom: 1px solid #e3e3e3;
+}
+#header .header__inner {
+    padding: 26px 32px;
+    height: 1202px;
+}
+#header .header__inner ul {
+    width: 257px;
+}
+#header .header__inner ul li {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#header .header__inner ul li:first-child {
+    background-color: #64A70A;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 700;
+    border-radius: 50px;
+    padding: 17px 29px 17px 40px;
+}
+#header .header__inner ul li img {
+    width: 30px;
+    height: 30px;
+}
+#header .header__inner ul li:nth-child(2){
+    margin-top: 80px;
+}
+#header .header__inner ul li:nth-child(3){
+    margin-top: 50px;
+}
+#header .header__inner ul li:nth-child(4){
+    margin-top: 50px;
+}
+#header .header__inner ul li:nth-child(5){
+    margin-top: 629px;
+    height: 240px;
+    padding: 51px 87px 155px 87px;
+    border-top: 1px solid #e3e3e3;
+}

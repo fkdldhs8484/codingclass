@@ -1,0 +1,22 @@
+.slider {
+    height: 961px;
+}
+.slider .slider__header {}
+.slider .slider__header div {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 12px;
+    margin-top: 211px;
+    color: #707070;
+}
+.slider .slider__header h3 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 113px;
+}
+.slide {
+    width: 100%;
+    background: #ccc;
+    height: 558px;
+}

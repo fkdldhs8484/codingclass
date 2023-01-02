@@ -1,0 +1,21 @@
+#footer {
+    text-align: center;
+    height: 240px;
+    border-top: solid 1px #e0e0e0;
+}
+#footer figure {}
+#footer figure img {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 27px;
+    margin-top: 53px;
+}
+#footer figure img:first-child {
+    margin-right: 21px;
+}
+#footer div {
+    color: #999;
+}
+#footer div:nth-child(3) {
+}
+

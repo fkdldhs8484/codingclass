@@ -1,0 +1,676 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.header .logo a, .header .btn_box .btn_share, .header .btn_box .btn_menu, .btn_close, .btn_close:hover, .quiz_card_result .btn_area .btn_item.download, .quiz_card_result .btn_area .btn_item.share, .quiz_card_result .quiz_tip .text::after {
+    background-image: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/sp_common_v2.png);
+    background-size: 294px 282px;
+}
+
+.wrap {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.header.fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+    z-index: 200;
+}
+
+.header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+@media (min-width: 1600px){
+    .header .inner {
+        padding: 23px 50px 27px;
+    }
+}
+
+
+.header .logo_box {
+    display: flex;
+    align-items: center;
+}
+
+@media (min-width: 1600px){
+    .header .logo_box {
+        flex: 1;
+    }
+}
+
+.header .logo a {
+    display: block;
+    margin-right: 9px;
+    background-position: -266px -99px;
+    width: 28px;
+    height: 28px;
+}
+
+.header .title {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #000;
+}
+
+.header .nav_pc.on {
+    display: block;
+}
+
+.header .section_list .item {
+    float: left;
+}
+
+.header .section_list a {
+    display: block;
+}
+
+.header .section_list .text {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: -0.56px;
+    color: #000;
+}
+
+.header .section_list .text::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    background-position: -1130px -630px;
+    width: 22px;
+    height: 22px;
+}
+
+.header .section_list .item + .item {
+    margin-left: 38px;
+}
+
+.header .section_list .text::before {
+    background-image: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/sp_pc_v3.png);
+    background-size: 1241px 1124px;
+}
+
+@media (min-width: 1600px){
+    .header .section_list {
+        display: block;
+        margin-top: 5px;
+    }
+}
+
+.header .btn_box .btn_share {
+    display: inline-block;
+    background-position: -153px -217px;
+    width: 28px;
+    height: 28px;
+}
+
+.header .btn_box .btn_menu {
+    display: inline-block;
+    margin-left: 16px;
+    background-position: -266px -132px;
+    width: 28px;
+    height: 28px;
+}
+
+@media (min-width: 1600px) {
+    .header .btn_box .btn_menu {
+        display: none;
+    }
+
+    .header .btn_box {
+        margin-left: 88px;
+    }
+}
+
+.container {
+    z-index: 10;
+    position: relative;
+}
+
+.inner {
+    padding: 0 50px;
+}
+
+.spot {  
+    padding: 270px 0 200px;
+    background: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/pc_bg_spot_dot.png) no-repeat 0 0;
+    background-size: cover;
+}
+
+.spot .spot_info {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.spot .spot_title_box {
+    position: relative;
+    margin: 0 auto;
+    width: 697px;
+}
+
+.spot .spot_title_box p {
+    font-weight: bold;
+}
+
+.spot_title {
+    margin: 42px 0 0 -20px;
+    width: 733px;
+    height: 259px;
+    background: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/pc_main_title.png) no-repeat 50% 0;
+    background-size: 733px 259px;
+}
+
+.spot_icon.graph {
+    position: absolute;
+    top: -15px;
+    left: 250.5px;
+    background-image: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/sp_pc_v3.png);
+    background-size: 1241px 1124px;
+    background-position: -544px -512px;
+    width: 120px;
+    height: 120px;
+}
+
+.content {
+    position: relative;
+}
+
+
+
+section {
+    position: relative;
+    padding: 23px 0 0;
+    z-index: 10;
+}
+
+.page_main {
+    padding-bottom: 245px;
+    background-color: #f5f5f5;
+}
+
+.page_main .inner {
+    padding-bottom: 34px;
+}
+
+.main_wrap {
+    position: absolute;
+    top: -35px;
+    left: 0;
+    padding-top: 14px;
+    width: 300px;
+    height: 36px;
+    border-radius: 0 12px 0 0;
+    background-color: #f5f5f5;
+}
+
+.main {
+    padding-left: 50px;
+    font-size: 20px;
+    line-height: 22px;
+}
+
+.title_box {
+    padding: 10px 0 70px;
+    border-bottom: 1px solid #000;
+}
+
+.title_box p {
+    font-size: 42px;
+    line-height: normal;
+    letter-spacing: -2px;
+}
+
+.title_box h2 {
+    text-align: right;
+    margin-top: 35px;
+    font-size: 100px;
+    line-height: 114px;
+    letter-spacing: -5px;
+}
+
+.info_box {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info_text {
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: -0.8px;
+}
+
+.info_data {
+    margin-top: 0;
+    text-align: right;
+}
+
+.info_data .d1 {
+    font-size: 16px;
+    line-height: 23px;
+    display: inline-block;
+}
+
+.info_data span a {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 20px;
+    letter-spacing: 0;
+    color: #0053e3;
+}
+
+.page_main .main_icon {
+    margin-top: -450px;
+}
+
+.main_icon {
+    position: relative;
+   
+    margin: 0 auto 0;
+    background-position: 0px -412px;
+    width: 406px;
+    height: 507px;
+    background-image: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/sp_pc_v3.png);
+    background-size: 1241px 1124px;
+    background-position: 0px 0px;
+}
+
+.icon1 {
+    position: absolute;
+    bottom: 63px;
+    left: -37px;
+    background-position: -1037px 0px;
+    width: 183px;
+    height: 197px;
+    background-image: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/sp_pc_v3.png);
+    background-size: 1241px;
+    background-position: -808px -243px;
+}
+
+.icon2 { 
+    position: absolute;
+    top: 180px;
+    right: -50px;
+    background-position: -138px -852px;
+    width: 239px;
+    height: 218px;
+    background-image: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/sp_pc_v3.png);
+    background-size: 1241px;
+    background-position: -808px 0px;
+}
+
+.icon3 {  
+    position: absolute;
+    bottom: -130px;
+    left: 165px;
+    background-position: -1037px 0px;
+    width: 392px;
+    height: 268px;
+    background-image: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/sp_pc_v3.png);
+    background-size: 1241px;
+    background-position: -411px 0px;
+}
+
+.main_btn .btn {
+    display: block;
+    /* margin: 0 auto; */
+    width: 260px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #000;
+    backdrop-filter: blur(7.3px);
+}
+
+.main_btn span {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 60px;
+    letter-spacing: -0.5px;
+    color: #fff;
+}
+
+/* section2 */
+.page_p1_wrap {
+    position: absolute;
+    top: -35px;
+    left: 0;
+    padding-top: 14px;
+    width: 300px;
+    height: 36px;
+    border-radius: 0 12px 0 0;
+    background-color: #ffe976;
+}
+
+.page_p1 {
+    padding-bottom: 245px;
+    background-color: #ffe976;
+}
+
+.page_iocn1 {
+    position: absolute;
+    top: 272px;
+    right: 353px;
+    background-position: -196px -412px;
+    width: 294px;
+    height: 151px;
+    background-image: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/sp_mo_v2.png);
+    background-size: 1259px 1186px;
+    
+}
+
+.page_video {
+    margin: 40px -20px 0;
+    padding-top: 57%;
+    background-color: #eee;
+}
+
+.page_p1 .main_btn {
+    position: relative;
+    margin-top: 50px;
+}
+
+.main_btn .btn_text {
+    display: block;
+    position: relative;
+    margin: 18px 0 0;
+    width: 256px;
+    height: 32px;
+    border-radius: 16px;
+    background-color: #336dff;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 32px;
+    letter-spacing: -0.3px;
+    color: #fff;
+}
+
+.btn_text_icon {
+    position: absolute;
+    top: 66px;
+    left: 120px;
+    width: 0;
+    height: 0;
+    border-color: #336dff transparent transparent;
+    border-style: solid;
+    border-width: 12px 8px 0;
+    transform: scaleY(-1);
+}
+
+.page_list {
+    margin-top: 50px;
+}
+
+.page_ul_list {
+    position: relative;
+}
+
+.page_list ul:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -30px;
+    right: -30px;
+    bottom: 0;
+    z-index: 100;
+}
+
+.page_list::after {
+    content: '';
+    position: absolute;
+}
+
+/* section3 */
+.page_p2 .inner {
+    padding: 0 20px;
+    padding-bottom: 140px;
+}
+
+.page_p2_wrap {
+    position: absolute;
+    top: -35px;
+    left: 0;
+    padding-top: 14px;
+    width: 300px;
+    height: 36px;
+    border-radius: 0 12px 0 0;
+    background-color: #fff;
+}
+
+.p2_icon_left {
+    position: relative;
+    display: inline-block;
+    vertical-align: bottom;
+    width: 13px;
+    height: 48px;
+    margin: 0px -32px -2px 0px;
+}
+
+.p2_icon_left:after {
+    content: '';
+    position: absolute;
+    top: -46px;
+    left: -11px;
+    right: 0px;
+    bottom: 0px;
+    background: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/gp_bracket_left.png) no-repeat 0 0;
+    background-size: 23px 85px;
+}
+
+.p2_icon_right {
+    position: relative;
+    display: inline-block;
+    vertical-align: bottom;
+    width: 13px;
+    height: 48px;
+}
+
+.p2_icon_right:after {
+    content: '';
+    position: absolute;
+    top: -46px;
+    left: -11px;
+    right: 0;
+    bottom: 0;
+    background: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/gp_bracket_right.png) no-repeat 0 0;
+    background-size: 23px 85px;
+}
+
+.page_icon {
+    position: relative;
+    margin: 0 auto;
+    width: 335px;
+    height: 240px;
+}
+
+.p_icon_01 {
+    position: absolute;
+    top: -160px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 5px;
+    width: 249px;
+    height: 266px;
+    z-index: 1;
+}
+
+.p_icon_01 img, .p_icon_02 img, .p_icon_03 img, .p_icon_04 img {
+    width: 100%;
+    height: 100%;
+}
+
+.p_icon_02 {
+    position: absolute;
+    top: -350px;
+    left: -140px;
+    width: 220px;
+    height: 217px;
+}
+
+.p_icon_03 {
+    position: absolute;
+    bottom: -17px;
+    right: 257px;
+    width: 260px;
+    height: 260px;
+}
+
+.p_icon_04 {
+    position: absolute;
+    bottom: -17px;
+    right: -221px;
+    width: 222px;
+    height: 222px;
+}
+
+.p_icon_04::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 5px;
+    background-color: #fff;
+}
+
+.page_p2 .main_btn{
+    position: absolute;
+    bottom: 165px;
+    left: 50px;
+}
+
+/* section */
+.box_list_wrap {
+    color: #fff;
+}
+.blog_wrap .main {
+    position: absolute;
+    top: -35px;
+    left: 0;
+    padding-top: 14px;
+    width: 300px;
+    height: 36px;
+    border-radius: 0 12px 0 0;
+    background-color: #17e076;
+    opacity: 0;
+}
+
+.blog_icon {
+    float: unset;
+    position: absolute;
+    top: 320px;
+    left: 63%;
+    transform: translateX(-50%);
+    margin-left: 23px;
+    width: 430px;
+    height: 580px;
+    background: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/t2_img_blog_main.png) no-repeat 0 0;
+    background-size: 430px 580px;
+}
+
+.box_list_wrap .box_blog{
+    background-color: #17e076;
+    
+    float: left;
+    width: 50%;
+    height: 900px;
+}
+
+.box_list_wrap .main_btn {
+    padding-top: 35px;
+}
+
+.box_list_wrap .main_btn a {
+    background-color: #fff;
+    
+}
+
+.box_list_wrap .main_btn span {
+    color: #000;
+}
+
+.title_box p{
+    font-size: 30px;
+}
+
+.title_box h3 {
+    margin-top: 42px;
+    text-align: right;
+    font-size: 65px;
+    font-weight: bold;
+    /* line-height: 52px; */
+    letter-spacing: -2.5px;
+}
+
+.title_box {
+    border-color: #fff;
+}
+
+.vibe_wrap {
+    position: absolute;
+    top: -35px;
+    left: 0;
+    padding-top: 14px;
+    width: 300px;
+    height: 36px;
+    border-radius: 0 12px 0 0;
+    background-color: #902df5;
+    opacity: 0;
+}
+
+.box_vibe {
+    float: left;
+    width: 50%;
+    height: 900px;
+    background-color: #902df5;
+}
+
+.box_place {
+    float: left;
+    width: 50%;
+    height: 900px;
+    background-color: #f3f6fb;
+}
+
+.box_expert {
+    float: left;
+    width: 50%;
+    height: 900px;
+    background-color: #4a65f6;
+}
+
+.box_webtoon {
+    float: left;
+    width: 50%;
+    height: 500px;
+    background-color: #170062;
+}
+
+.box_series {
+    float: left;
+    width: 50%;
+    height: 500px;
+    background-color: #07043a;
+}
+
+/* section5 */
