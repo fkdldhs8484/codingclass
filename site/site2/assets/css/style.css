@@ -673,4 +673,67 @@ section {
     background-color: #07043a;
 }
 
+.box_list_wrap::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
 /* section5 */
+.page_p3{
+    background-color: #131313;
+    color: #fff;
+}
+
+.page_p3_wrap{
+    position: absolute;
+    top: -35px;
+    left: 0;
+    padding-top: 14px;
+    width: 220px;
+    height: 36px;
+    border-radius: 0 12px 0 0;
+    background-color: #131313;
+}
+
+.page_p3 .main_btn a {
+    margin-top: 40px;
+    background-color: #fff;
+}
+
+.page_p3 .main_btn span {
+    color: #000;
+}
+
+
+
+.footer {
+    color: #fff;
+    background-color: #131313;
+}
+
+.footer .inner {
+    padding: 240px 50px 50px;
+    font-size: 16px;
+    line-height: normal;
+    letter-spacing: -0.5px;
+}
+
+.footer_box {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    margin-top: 15px;
+}
+
+.footer_box a {
+
+}
+
+.footer_box span {
+    margin-left: 34px;
+}
+
+.footer .logo a {
+    height: 130px;
+}
