@@ -705,11 +705,18 @@ section {
     color: #000;
 }
 
+.page_box1 ul li {
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 14px 0;
+}
+
 
 
 .footer {
     color: #fff;
     background-color: #131313;
+    position: relative;
 }
 
 .footer .inner {
@@ -721,19 +728,26 @@ section {
 
 .footer_box {
     position: absolute;
-    top: 0;
-    left: 20px;
-    margin-top: 15px;
+    bottom: 40px;
+    right: 30px;
+    top: auto;
+    left: auto;
+
 }
 
 .footer_box a {
-
+    color: #fff;
 }
 
 .footer_box span {
     margin-left: 34px;
 }
 
-.footer .logo a {
-    height: 130px;
+.footer .logo {
+    display: block;
+    width: 335px;
+    height: 61px;
+    background: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/mo_logo_footer_naver.png) no-repeat 0 0;
+    background-size: 335px 61px;
+    
 }
