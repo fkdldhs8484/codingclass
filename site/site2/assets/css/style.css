@@ -250,8 +250,8 @@ section {
 
 .info_box {
     margin-top: 25px;
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    justify-content: space-between; */
 }
 
 .info_text {
@@ -666,6 +666,11 @@ section {
     width: 50%;
     height: 900px;
     background-color: #f3f6fb;
+    color: #000;
+}
+
+.box_place .title_box {
+ border-color: #000;
 }
 
 .place_icon {
@@ -708,13 +713,52 @@ section {
     background-color: #170062;
 }
 
+.box_webtoon .title_box {
+    padding: 10px 0 30px;
+}
 
+.box_webtoon .info_text {
+    margin-top: 42px;
+    text-align: right;
+    font-size: 45px;
+    font-weight: bold;
+    line-height: 52px;
+    letter-spacing: -2.5px;
+}
+
+
+
+.box_webtoon .title_box {
+    padding: 10px 0 30px;
+}
+
+.box_webtoon .info_text {
+    margin-top: 42px;
+    text-align: right;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 52px;
+    letter-spacing: -2.5px;
+} 
 
 .box_series {
     float: left;
     width: 50%;
     height: 500px;
     background-color: #07043a;
+}
+
+.box_series .title_box {
+    padding: 10px 0 30px;
+}
+
+.box_series .info_text {
+    margin-top: 42px;
+    text-align: right;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 52px;
+    letter-spacing: -2.5px;
 }
 
 .box_list_wrap::after {
@@ -740,6 +784,10 @@ section {
     background-color: #131313;
 }
 
+.page_p3 .title_box {
+    border-color: #fff;
+}
+
 .page_p3 .main_btn a {
     margin-top: 40px;
     background-color: #fff;
@@ -751,8 +799,12 @@ section {
 
 .page_box1 ul li {
     border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+   
     padding: 14px 0;
+}
+
+.page_box1 ul li:nth-child(2){
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);;
 }
 
 
@@ -780,11 +832,12 @@ section {
 }
 
 .footer_box a {
-    color: #fff;
+    color: #9d9d9d;
 }
 
 .footer_box span {
     margin-left: 34px;
+    color: #9d9d9d;
 }
 
 .footer .logo {
