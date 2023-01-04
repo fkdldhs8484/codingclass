@@ -678,7 +678,7 @@ section {
     width: 430px;
     height: 580px;
     background: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/t1_img_place_main_v2.png) no-repeat 0 0;
-    background-size: 320px 432px;
+    background-size: 430px 580px;
 }
 
 .box_expert {
@@ -691,14 +691,14 @@ section {
 .expert_icon {
     float: unset;
     position: absolute;
-    top: 400px;
+    top: 380px;
     left: 63%;
     transform: translateX(-50%);
     margin-left: 23px;
     width: 430px;
     height: 580px;
     background: url(https://campaign-cdn.pstatic.net/0/campaign/2022/12/2022-year-end/img/t1_img_expert_main.png) no-repeat 0 0;
-    background-size: 320px 432px;
+    background-size: 430px 580px;
 }
 
 .box_webtoon {
